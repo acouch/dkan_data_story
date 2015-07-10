@@ -1,9 +1,10 @@
 
 .node-type-dkan-data-story img.story-image-full {
-    max-width: 100%;
-    width: 100% !important;
-    height: auto;
-    vertical-align: bottom;
+  width: 100%;
+  width: inherit;  /* This makes the next two lines work in IE8. */
+  max-width: 100% !important;
+  height: auto !important;
+  vertical-align: bottom;
 }
 .node-type-dkan-data-story .field-type-image {
   margin-bottom: 1.5em;
@@ -45,7 +46,7 @@ Data Story Page
 .view-stories .view-header {
 	margin-bottom: 1em;
 }
-.view-stories .views-row img {
+.view-stories .row img {
 	width: 100%;
 	height: auto;
 	margin-top: 1.5em;
