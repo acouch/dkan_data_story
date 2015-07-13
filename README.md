@@ -1,6 +1,8 @@
-[![Build Status](https://travis-ci.org/NuCivic/data_story.svg?branch=master)](https://travis-ci.org/NuCivic/data_story)
+# DKAN Data Story
 
-# NuCivic Data Story
+DKAN Data Story adds a new content type for "data stories" to DKAN. Data Stories can have complex layouts using [Panels](http://www.drupal.org/project/panels) and [Panelizer](https://www.drupal.org/project/panelizer) and contain embedded [visualiztions](https://github.com/NuCivic/visualization_entity) and other elements.
+
+Module includes:
 
 + Default set of formatting options for Blog Content Type (Story).
 + Search API Server and Index for Stories.
