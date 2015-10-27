@@ -1,12 +1,31 @@
 default:
+  suites:
+     default:
+        contexts:
+          - Drupal\DrupalExtension\Context\DrupalContext
+          - Drupal\DrupalExtension\Context\MinkContext
+          - Drupal\DrupalExtension\Context\MessageContext
+          - Drupal\DrupalExtension\Context\DrushContext
+          - Drupal\DKANExtension\Context\DKANContext
+          - Drupal\DKANExtension\Context\GroupContext
+          - Drupal\DKANExtension\Context\DatasetContext
+          - Drupal\DKANExtension\Context\ResourceContext
+          - Drupal\DKANExtension\Context\PageContext
+          - Drupal\DKANExtension\Context\DKANDataStoryContext
+          - Drupal\DKANExtension\Context\DataDashboardContext
+          #- Drupal\DKANExtension\Context\ChartContext
+          - Devinci\DevinciExtension\Context\DebugContext:
+              asset_dump_path: %paths.base%/assets
+          - Devinci\DevinciExtension\Context\JavascriptContext:
+              maximum_wait: 30
   extensions:
-    Behat\MinkExtension\Extension:
+    Behat\MinkExtension:
       goutte: ~
       selenium2: ~
       base_url: http://127.0.0.1:8888
       default_session: 'goutte'
       javascript_session: 'selenium2'
-    Drupal\DrupalExtension\Extension:
+    Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drupal'
       drush:
@@ -21,6 +40,22 @@ default:
 
 teo:
   extensions:
-    Drupal\DrupalExtension\Extension:
+    Drupal\DrupalExtension:
       drupal:
         drupal_root: '/Users/teofilosibileau/Developing/NUCIVIC/drupal_test/test/'
+
+docker:
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://web
+      #base_url: http://dkan.local
+      selenium2:
+        wd_host: http://browser:4444/wd/hub
+        #wd_host: http://192.168.10.1:4444/wd/hub
+        browser: chrome
+        #browser: firefox
+    Drupal\DrupalExtension:
+      drupal:
+        drupal_root: '/var/www/docroot'
+      drush:
+        root: '/var/www/docroot'
