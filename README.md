@@ -1,4 +1,4 @@
-**NOTE:** This module is now [included in the DKAN distribution]. This separate repository is depricated, and will soon be removed. 
+**NOTE:** This module is now [included in the DKAN distribution](https://github.com/NuCivic/dkan/tree/7.x-1.x/modules/dkan/dkan_data_story). This separate repository is depricated, and will soon be removed. 
 
 # DKAN Data Story
 
